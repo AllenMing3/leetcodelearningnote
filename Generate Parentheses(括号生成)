@@ -1,0 +1,7 @@
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+链接：https://leetcode.cn/problems/generate-parentheses
+
+思路：利用动态规划（第一次用，还在学习中）
+
+代码：
