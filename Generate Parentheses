@@ -3,5 +3,6 @@ Given n pairs of parentheses, write a function to generate all combinations of w
 链接：https://leetcode.cn/problems/generate-parentheses
 
 思路：利用动态规划（第一次用，还在学习中）
+还有一种思路是利用二叉树，因为每出现一个）之前最少都要有一个以上（，就可以考虑二叉树，其中二叉树的深度为n，根节点一定为），深度优先算法
 
 代码：
