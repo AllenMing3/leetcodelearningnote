@@ -10,7 +10,7 @@ You must write an algorithm with O(log n) runtime complexity.
 链接：https://leetcode.cn/problems/search-in-rotated-sorted-array
 
 
-思路：现在是两端有序数列组成的一个新数列，时间复杂度要求logn，所以会猜测用二分来解决问题；如果使用二分就会转化为两个问题：
+思路：现在是两端有序数列组成的一个新数列，**时间复杂度要求logn**，所以会猜测用二分来解决问题；如果使用二分就会转化为两个问题：
 - 第1个问题是二分后，和nums[mid]比较后，调整范围变成一个**有序数列**
 - 第2个问题是二分后，和nums[mid]比较后，删除了一些数据，**缩小了总体的数据**，依旧是由两个有序数组组成
 
