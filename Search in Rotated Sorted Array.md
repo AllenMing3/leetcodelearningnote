@@ -16,36 +16,37 @@ You must write an algorithm with O(log n) runtime complexity.
 
 代码：
 
-class Solution:
-    def search(self, nums: List[int], target: int) -> int:
-        '''
-        看到logn的复杂度，首先反应就是二叉树或者二分这类的算法 
-        '''
-        if not nums:
-            return -1
         
-        left, right = 0, len(nums) - 1
-        while left <= right:
-            mid = (right+left) // 2
-            if target == nums[mid]:
-                return mid
+    class Solution:
+        def search(self, nums: List[int], target: int) -> int:
+            '''
+            看到logn的复杂度，首先反应就是二叉树或者二分这类的算法 
+            '''
+            if not nums:
+                return -1
 
-            if nums[left] <= nums[mid]:  #旋转后排在前面的大数比较多
-                if nums[left] <= target <= nums[mid]:
-                    right = mid - 1     #变成一个有序数组的问题
-                else:
-                    left = mid + 1      #缩小数组范围（两端递增数组）
+            left, right = 0, len(nums) - 1
+            while left <= right:
+                mid = (right+left) // 2
+                if target == nums[mid]:
+                    return mid
+
+                if nums[left] <= nums[mid]:  #旋转后排在前面的大数比较多
+                    if nums[left] <= target <= nums[mid]:
+                        right = mid - 1     #变成一个有序数组的问题
+                    else:
+                        left = mid + 1      #缩小数组范围（两端递增数组）
+
+                else:                        #旋转后排在后面的小数比较多
+                    if nums[mid] <= target <= nums[right]:
+                        left = mid + 1      #变成一个有序数组问题
+                    else:
+                        right = mid - 1     #缩小数组范围（两端递增数组）
+
+            return -1
             
-            else:                        #旋转后排在后面的小数比较多
-                if nums[mid] <= target <= nums[right]:
-                    left = mid + 1      #变成一个有序数组问题
-                else:
-                    right = mid - 1     #缩小数组范围（两端递增数组）
 
-        return -1
-            
-
-                
+                        
         
 
 
