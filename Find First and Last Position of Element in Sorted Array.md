@@ -1,3 +1,4 @@
+#### 题目
 Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
 
 If target is not found in the array, return [-1, -1].
@@ -7,16 +8,16 @@ You must write an algorithm with O(log n) runtime complexity.
 来源：力扣（LeetCode）
 链接：https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array
 
-思路：
+#### 思路：
 因为考虑到时间**复杂度是Ologn**，那么就是不能遍历整个数组了
 我的想法结合**二分法**来做，就是从mid开始出发，在辐射到1/4, 3/4用这些下标的值target比较，
 确认是左半部分还是右半部分，这样二分式的确定范围，最终去确认下标
 显然strat，end两个值的寻找方法是类似的，所以可以考虑先寻找start，end
 
-难点：
+#### 难点：
 目前卡在了设定两个函数，求出start，end后，不太会如何在leetcode中控制在同一个类中函数结果的调用。等下去看一下结果。
 
-代码：
+#### 代码：
 
 
 
