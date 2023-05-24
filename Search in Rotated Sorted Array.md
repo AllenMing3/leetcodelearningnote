@@ -1,3 +1,4 @@
+#### 题目
 There is an integer array nums sorted in ascending order (with distinct values).
 
 Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
@@ -9,12 +10,12 @@ You must write an algorithm with O(log n) runtime complexity.
 来源：力扣（LeetCode）
 链接：https://leetcode.cn/problems/search-in-rotated-sorted-array
 
-
-思路：现在是两端有序数列组成的一个新数列，**时间复杂度要求logn**，所以会猜测用二分来解决问题；如果使用二分就会转化为两个问题：
+#### 思路：
+现在是两端有序数列组成的一个新数列，**时间复杂度要求logn**，所以会猜测用二分来解决问题；如果使用二分就会转化为两个问题：
 - 第1个问题是二分后，和nums[mid]比较后，调整范围变成一个**有序数列**
 - 第2个问题是二分后，和nums[mid]比较后，删除了一些数据，**缩小了总体的数据**，依旧是由两个有序数组组成
 
-代码：
+#### 代码：
 
         
     class Solution:
