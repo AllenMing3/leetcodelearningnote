@@ -5,7 +5,7 @@ Return a boolean array result of length n, where result[i] is true if, after giv
 
 Note that multiple kids can have the greatest number of candies.
 
-来源：力扣（LeetCode）
+来源：力扣（LeetCode） 
 链接：https://leetcode.cn/problems/kids-with-the-greatest-number-of-candies
 
 #### 思路
