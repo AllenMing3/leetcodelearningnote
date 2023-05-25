@@ -1,7 +1,7 @@
 #### 题目
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
-Notice that the solution set must not contain duplicate triplet
+Notice that the solution set must not contain duplicate triplet 
 
 来源：力扣（LeetCode）
 链接：https://leetcode.cn/problems/3sum
