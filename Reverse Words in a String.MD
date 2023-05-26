@@ -15,6 +15,7 @@ Note that s may contain leading or trailing spaces or multiple spaces between tw
 然后遍历在空格区域，就需要一直移动头指针，知道第一次遍历到字母，这时候，移动尾指针。重复这个操作，直到头指针遍历完整个字符串
 
 #### 难点
+- 出去多余的空格
 - 遍历的时候，尾指针移动的时机是在遍历完空格后的第一次
 - append的时候要运用到切片，所以sec_指针位置需要 +1
 - 便利完成后，因为要重新返回一个字符串所以需要做" ".join(s)操作
@@ -22,6 +23,8 @@ Note that s may contain leading or trailing spaces or multiple spaces between tw
 #### 代码
 
   class Solution:
+
+
       def reverseWords(self, s: str) -> str:
           '''
           思路：利用双指针从最后一个字符开始向前遍历整个字符串，每次遇到一个空格，则成功记录一个单词，把他append到新的列表中
